@@ -14,9 +14,9 @@ import com.entity.UsersEntity;
  * 用户
  */
 public interface UsersDao extends BaseMapper<UsersEntity> {
-	
-	List<UsersEntity> selectListView(@Param("ew") Wrapper<UsersEntity> wrapper);
 
-	List<UsersEntity> selectListView(Pagination page,@Param("ew") Wrapper<UsersEntity> wrapper);
-	
+    List<UsersEntity> selectListView(@Param("ew") Wrapper<UsersEntity> wrapper);
+
+    List<UsersEntity> selectListView(Pagination page, @Param("ew") Wrapper<UsersEntity> wrapper);
+
 }

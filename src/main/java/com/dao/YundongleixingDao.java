@@ -2,8 +2,9 @@ package com.dao;
 
 import com.entity.YundongleixingEntity;
 import com.baomidou.mybatisplus.mapper.BaseMapper;
+
 import java.util.List;
-import java.util.Map;
+
 import com.baomidou.mybatisplus.mapper.Wrapper;
 import com.baomidou.mybatisplus.plugins.pagination.Pagination;
 
@@ -14,23 +15,23 @@ import com.entity.view.YundongleixingView;
 
 /**
  * 运动类型
- * 
- * @author 
- * @email 
+ *
+ * @author
+ * @email
  * @date 2024-04-22 21:50:06
  */
 public interface YundongleixingDao extends BaseMapper<YundongleixingEntity> {
-	
-	List<YundongleixingVO> selectListVO(@Param("ew") Wrapper<YundongleixingEntity> wrapper);
-	
-	YundongleixingVO selectVO(@Param("ew") Wrapper<YundongleixingEntity> wrapper);
-	
-	List<YundongleixingView> selectListView(@Param("ew") Wrapper<YundongleixingEntity> wrapper);
 
-	List<YundongleixingView> selectListView(Pagination page,@Param("ew") Wrapper<YundongleixingEntity> wrapper);
+    List<YundongleixingVO> selectListVO(@Param("ew") Wrapper<YundongleixingEntity> wrapper);
 
-	
-	YundongleixingView selectView(@Param("ew") Wrapper<YundongleixingEntity> wrapper);
-	
+    YundongleixingVO selectVO(@Param("ew") Wrapper<YundongleixingEntity> wrapper);
+
+    List<YundongleixingView> selectListView(@Param("ew") Wrapper<YundongleixingEntity> wrapper);
+
+    List<YundongleixingView> selectListView(Pagination page, @Param("ew") Wrapper<YundongleixingEntity> wrapper);
+
+
+    YundongleixingView selectView(@Param("ew") Wrapper<YundongleixingEntity> wrapper);
+
 
 }

@@ -1,6 +1,7 @@
 package com.service.impl;
 
 import org.springframework.stereotype.Service;
+
 import java.util.Map;
 import java.util.List;
 
@@ -20,8 +21,8 @@ import com.entity.view.YundongdakaView;
 
 @Service("yundongdakaService")
 public class YundongdakaServiceImpl extends ServiceImpl<YundongdakaDao, YundongdakaEntity> implements YundongdakaService {
-	
-	
+
+
     @Override
     public PageUtils queryPage(Map<String, Object> params) {
         Page<YundongdakaEntity> page = this.selectPage(
@@ -30,35 +31,35 @@ public class YundongdakaServiceImpl extends ServiceImpl<YundongdakaDao, Yundongd
         );
         return new PageUtils(page);
     }
-    
-    @Override
-	public PageUtils queryPage(Map<String, Object> params, Wrapper<YundongdakaEntity> wrapper) {
-		  Page<YundongdakaView> page =new Query<YundongdakaView>(params).getPage();
-	        page.setRecords(baseMapper.selectListView(page,wrapper));
-	    	PageUtils pageUtil = new PageUtils(page);
-	    	return pageUtil;
- 	}
 
-    
     @Override
-	public List<YundongdakaVO> selectListVO(Wrapper<YundongdakaEntity> wrapper) {
- 		return baseMapper.selectListVO(wrapper);
-	}
-	
-	@Override
-	public YundongdakaVO selectVO(Wrapper<YundongdakaEntity> wrapper) {
- 		return baseMapper.selectVO(wrapper);
-	}
-	
-	@Override
-	public List<YundongdakaView> selectListView(Wrapper<YundongdakaEntity> wrapper) {
-		return baseMapper.selectListView(wrapper);
-	}
+    public PageUtils queryPage(Map<String, Object> params, Wrapper<YundongdakaEntity> wrapper) {
+        Page<YundongdakaView> page = new Query<YundongdakaView>(params).getPage();
+        page.setRecords(baseMapper.selectListView(page, wrapper));
+        PageUtils pageUtil = new PageUtils(page);
+        return pageUtil;
+    }
 
-	@Override
-	public YundongdakaView selectView(Wrapper<YundongdakaEntity> wrapper) {
-		return baseMapper.selectView(wrapper);
-	}
+
+    @Override
+    public List<YundongdakaVO> selectListVO(Wrapper<YundongdakaEntity> wrapper) {
+        return baseMapper.selectListVO(wrapper);
+    }
+
+    @Override
+    public YundongdakaVO selectVO(Wrapper<YundongdakaEntity> wrapper) {
+        return baseMapper.selectVO(wrapper);
+    }
+
+    @Override
+    public List<YundongdakaView> selectListView(Wrapper<YundongdakaEntity> wrapper) {
+        return baseMapper.selectListView(wrapper);
+    }
+
+    @Override
+    public YundongdakaView selectView(Wrapper<YundongdakaEntity> wrapper) {
+        return baseMapper.selectView(wrapper);
+    }
 
     @Override
     public List<Map<String, Object>> selectValue(Map<String, Object> params, Wrapper<YundongdakaEntity> wrapper) {
@@ -74,8 +75,6 @@ public class YundongdakaServiceImpl extends ServiceImpl<YundongdakaDao, Yundongd
     public List<Map<String, Object>> selectGroup(Map<String, Object> params, Wrapper<YundongdakaEntity> wrapper) {
         return baseMapper.selectGroup(params, wrapper);
     }
-
-
 
 
 }

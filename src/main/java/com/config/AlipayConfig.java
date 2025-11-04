@@ -1,7 +1,5 @@
 package com.config;
 
-import java.io.FileWriter;
-import java.io.IOException;
 
 /* *
  *类名：AlipayConfig

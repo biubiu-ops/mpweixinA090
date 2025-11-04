@@ -1,6 +1,7 @@
 package com.service.impl;
 
 import org.springframework.stereotype.Service;
+
 import java.util.Map;
 import java.util.List;
 
@@ -20,8 +21,8 @@ import com.entity.view.JiaoshiView;
 
 @Service("jiaoshiService")
 public class JiaoshiServiceImpl extends ServiceImpl<JiaoshiDao, JiaoshiEntity> implements JiaoshiService {
-	
-	
+
+
     @Override
     public PageUtils queryPage(Map<String, Object> params) {
         Page<JiaoshiEntity> page = this.selectPage(
@@ -30,35 +31,35 @@ public class JiaoshiServiceImpl extends ServiceImpl<JiaoshiDao, JiaoshiEntity> i
         );
         return new PageUtils(page);
     }
-    
-    @Override
-	public PageUtils queryPage(Map<String, Object> params, Wrapper<JiaoshiEntity> wrapper) {
-		  Page<JiaoshiView> page =new Query<JiaoshiView>(params).getPage();
-	        page.setRecords(baseMapper.selectListView(page,wrapper));
-	    	PageUtils pageUtil = new PageUtils(page);
-	    	return pageUtil;
- 	}
 
-    
     @Override
-	public List<JiaoshiVO> selectListVO(Wrapper<JiaoshiEntity> wrapper) {
- 		return baseMapper.selectListVO(wrapper);
-	}
-	
-	@Override
-	public JiaoshiVO selectVO(Wrapper<JiaoshiEntity> wrapper) {
- 		return baseMapper.selectVO(wrapper);
-	}
-	
-	@Override
-	public List<JiaoshiView> selectListView(Wrapper<JiaoshiEntity> wrapper) {
-		return baseMapper.selectListView(wrapper);
-	}
+    public PageUtils queryPage(Map<String, Object> params, Wrapper<JiaoshiEntity> wrapper) {
+        Page<JiaoshiView> page = new Query<JiaoshiView>(params).getPage();
+        page.setRecords(baseMapper.selectListView(page, wrapper));
+        PageUtils pageUtil = new PageUtils(page);
+        return pageUtil;
+    }
 
-	@Override
-	public JiaoshiView selectView(Wrapper<JiaoshiEntity> wrapper) {
-		return baseMapper.selectView(wrapper);
-	}
+
+    @Override
+    public List<JiaoshiVO> selectListVO(Wrapper<JiaoshiEntity> wrapper) {
+        return baseMapper.selectListVO(wrapper);
+    }
+
+    @Override
+    public JiaoshiVO selectVO(Wrapper<JiaoshiEntity> wrapper) {
+        return baseMapper.selectVO(wrapper);
+    }
+
+    @Override
+    public List<JiaoshiView> selectListView(Wrapper<JiaoshiEntity> wrapper) {
+        return baseMapper.selectListView(wrapper);
+    }
+
+    @Override
+    public JiaoshiView selectView(Wrapper<JiaoshiEntity> wrapper) {
+        return baseMapper.selectView(wrapper);
+    }
 
 
 }

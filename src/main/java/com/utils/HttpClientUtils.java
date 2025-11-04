@@ -40,17 +40,17 @@ public class HttpClientUtils {
             BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream(), "UTF-8"));
             String line;
             while ((line = in.readLine()) != null) {
-                res += line+"\n";
+                res += line + "\n";
             }
             in.close();
             return res;
-        }catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
 
     }
-    
+
     public static String doPost(String url, Map<String, String> param) {
         // 创建Httpclient对象
         CloseableHttpClient httpClient = HttpClients.createDefault();
@@ -81,7 +81,7 @@ public class HttpClientUtils {
                 e.printStackTrace();
             }
         }
- 
+
         return resultString;
     }
 

@@ -9,7 +9,6 @@ import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import org.apache.poi.ss.usermodel.DateUtil;
 import java.util.Objects;
-import com.alibaba.fastjson.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.baidu.aip.face.AipFace;
 import com.baidu.aip.face.MatchRequest;
@@ -170,14 +169,14 @@ public class CommonUtil {
                 path = new File("");
             }
             File upload = new File(path.getAbsolutePath(),"/upload/");
-            File file1 = new File(upload.getAbsolutePath()+"/"+face1);
+//            File file1 = new File(upload.getAbsolutePath()+"/"+face1);
             File file2 = new File(upload.getAbsolutePath()+"/"+face2);
-            String img1 = Base64Util.encode(FileUtil.FileToByte(file1));
+//            String img1 = Base64Util.encode(FileUtil.FileToByte(file1));
             String img2 = Base64Util.encode(FileUtil.FileToByte(file2));
-            MatchRequest req1 = new MatchRequest(img1, "BASE64");
+//            MatchRequest req1 = new MatchRequest(img1, "BASE64");
             MatchRequest req2 = new MatchRequest(img2, "BASE64");
             ArrayList<MatchRequest> requests = new ArrayList<MatchRequest>();
-            requests.add(req1);
+//            requests.add(req1);
             requests.add(req2);
             res = client.match(requests);
             System.out.println(res);

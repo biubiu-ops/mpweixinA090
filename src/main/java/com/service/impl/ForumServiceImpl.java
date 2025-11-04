@@ -1,6 +1,7 @@
 package com.service.impl;
 
 import org.springframework.stereotype.Service;
+
 import java.util.Map;
 import java.util.List;
 
@@ -20,8 +21,8 @@ import com.entity.view.ForumView;
 
 @Service("forumService")
 public class ForumServiceImpl extends ServiceImpl<ForumDao, ForumEntity> implements ForumService {
-	
-	
+
+
     @Override
     public PageUtils queryPage(Map<String, Object> params) {
         Page<ForumEntity> page = this.selectPage(
@@ -30,35 +31,35 @@ public class ForumServiceImpl extends ServiceImpl<ForumDao, ForumEntity> impleme
         );
         return new PageUtils(page);
     }
-    
-    @Override
-	public PageUtils queryPage(Map<String, Object> params, Wrapper<ForumEntity> wrapper) {
-		  Page<ForumView> page =new Query<ForumView>(params).getPage();
-	        page.setRecords(baseMapper.selectListView(page,wrapper));
-	    	PageUtils pageUtil = new PageUtils(page);
-	    	return pageUtil;
- 	}
 
-    
     @Override
-	public List<ForumVO> selectListVO(Wrapper<ForumEntity> wrapper) {
- 		return baseMapper.selectListVO(wrapper);
-	}
-	
-	@Override
-	public ForumVO selectVO(Wrapper<ForumEntity> wrapper) {
- 		return baseMapper.selectVO(wrapper);
-	}
-	
-	@Override
-	public List<ForumView> selectListView(Wrapper<ForumEntity> wrapper) {
-		return baseMapper.selectListView(wrapper);
-	}
+    public PageUtils queryPage(Map<String, Object> params, Wrapper<ForumEntity> wrapper) {
+        Page<ForumView> page = new Query<ForumView>(params).getPage();
+        page.setRecords(baseMapper.selectListView(page, wrapper));
+        PageUtils pageUtil = new PageUtils(page);
+        return pageUtil;
+    }
 
-	@Override
-	public ForumView selectView(Wrapper<ForumEntity> wrapper) {
-		return baseMapper.selectView(wrapper);
-	}
+
+    @Override
+    public List<ForumVO> selectListVO(Wrapper<ForumEntity> wrapper) {
+        return baseMapper.selectListVO(wrapper);
+    }
+
+    @Override
+    public ForumVO selectVO(Wrapper<ForumEntity> wrapper) {
+        return baseMapper.selectVO(wrapper);
+    }
+
+    @Override
+    public List<ForumView> selectListView(Wrapper<ForumEntity> wrapper) {
+        return baseMapper.selectListView(wrapper);
+    }
+
+    @Override
+    public ForumView selectView(Wrapper<ForumEntity> wrapper) {
+        return baseMapper.selectView(wrapper);
+    }
 
 
 }
