@@ -2,7 +2,7 @@
   <div>
     <div class="container" :style='{"minHeight":"100vh","alignItems":"center","background":"url(http://codegen.caihongy.cn/20231128/5a94f436dc0b45ac9c63ac27350c72e9.webp)","display":"flex","width":"100%","backgroundSize":"cover","backgroundPosition":" center","backgroundRepeat":"no-repeat","justifyContent":"center"}'>
       <el-form :style='{"padding":"40px 20px 20px","boxShadow":"0 1px 6px rgba(64, 158, 255, .8)","backdrop-filter":"blur(6px)","margin":"0 ","borderRadius":"10px","background":"rgba(255, 255, 255, 0.2)","width":"500px","height":"auto"}'>
-        <div v-if="true" :style='{"margin":"0 0 10px 0","color":"#000","textAlign":"center","width":"100%","lineHeight":"44px","fontSize":"20px","fontWeight":"700"}' class="title-container">基于微信小程序的学生运动打卡系统的设计与实现登录</div>
+        <div v-if="true" :style='{"margin":"0 0 10px 0","color":"#000","textAlign":"center","width":"100%","lineHeight":"44px","fontSize":"20px","fontWeight":"700"}' class="title-container">微信小程序-学生运动打卡系统-</div>
         <div v-if="loginType==1" class="list-item" :style='{"width":"80%","margin":"20px auto","alignItems":"center","display":"flex"}'>
           <div v-if="true" class="lable" :style='{"width":"80px","lineHeight":"44px","fontSize":"14px","color":"#000"}'>用户名：</div>
           <input :style='{"border":"1px solid ","padding":"0 10px","color":"rgba(44, 55, 66, 0.9)","borderRadius":"4px","background":" #fff","width":"100%","fontSize":"14px","height":"44px"}' placeholder="请输入用户名" name="username" type="text" v-model="rulesForm.username">
