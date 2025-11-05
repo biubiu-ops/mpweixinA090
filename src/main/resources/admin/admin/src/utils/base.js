@@ -9,8 +9,8 @@ const base = {
     },
     getProjectName(){
         return {
-            projectName: "基于微信小程序的学生运动打卡系统的设计与实现"
-        } 
+            projectName: "微信小程序-学生运动打卡系统"
+        }
     }
 }
 export default base

@@ -2,7 +2,7 @@
 	<div>
 		<div class="container" :style='{"minHeight":"100vh","alignItems":"center","background":"url(http://codegen.caihongy.cn/20231128/5a94f436dc0b45ac9c63ac27350c72e9.webp)","display":"flex","width":"100%","backgroundSize":"cover","backgroundPosition":"center center","backgroundRepeat":"no-repeat","justifyContent":"center"}'>
 			<el-form v-if="pageFlag=='register'" :style='{"padding":"20px","boxShadow":"0 1px 6px rgba(64, 158, 255, .8)","backdrop-filter":"blur(6px)","margin":"50px 0","borderRadius":"10px","background":"rgba(255, 255, 255, 0.3)","width":"600px","height":"auto"}' ref="rgsForm" class="rgs-form" :model="rgsForm" :rules="rules">
-				<div v-if="true" :style='{"margin":"0 0 10px 0","color":"#000","textAlign":"center","width":"100%","lineHeight":"64px","fontSize":"20px","fontWeight":"600"}' class="title">基于微信小程序的学生运动打卡系统的设计与实现注册</div>
+				<div v-if="true" :style='{"margin":"0 0 10px 0","color":"#000","textAlign":"center","width":"100%","lineHeight":"64px","fontSize":"20px","fontWeight":"600"}' class="title">微信小程序-学生运动打卡系统注册</div>
 				<el-form-item :style='{"width":"80%","padding":"0","margin":"0 auto 5px","height":"auto"}' class="list-item" v-if="tableName=='xuesheng'">
 					<div v-if="true" :style='{"width":"100%","lineHeight":"44px","fontSize":"14px","position":"relative","color":"#222"}' class="lable" :class="changeRules('xuehao')?'required':''">学号：</div>
 					<el-input  v-model="ruleForm.xuehao"  autocomplete="off" placeholder="学号"  type="text"  />

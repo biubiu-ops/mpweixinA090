@@ -235,7 +235,7 @@
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "基于微信小程序的学生运动打卡系统的设计与实现",
+		"navigationBarTitleText": "微信小程序-学生运动打卡系统",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	},
